@@ -1,0 +1,61 @@
+<div class="container mt-5 mb-5">
+  <h1 class="mb-5">
+    Technologies
+  </h1>
+
+  <% @technologies.each do |technology| %>
+    <div class="border rounded p-3 mb-5">
+
+      <h2>
+        <%= technology.title %>
+      </h2>
+
+
+
+      <div class="border rounded p-3 mb-3 mt-3">
+        <small class="text-muted">
+          Purpose
+        </small>
+        
+        <p>
+          <%= technology.purpose %>
+        </p>
+      </div>
+
+      <div class="border rounded p-3 mb-3 mt-3">
+
+        <small class="text-muted">
+          Technology description
+        </small>
+
+        <p>
+          <%= technology.description %>
+        </p>
+      </div>
+
+      <small class="text-muted">
+        Technology doc link
+      </small>
+
+      <div class="border rounded p-3 mb-3 mt-3">
+        <%= technology.doc %>
+      </div>
+
+      <small class="text-muted">
+        Technology global rating
+      </small>
+
+      <div class="border rounded p-3 mb-4 col-md-2 mt-3">
+        <%= technology.rating %>
+      </div>
+
+      <div class="container pl-0">
+        <%= link_to 'Create', new_technology_path(technology), class: 'btn btn-primary btn-sm mr-1 ml-0' %>
+        <%= link_to 'Show', technology_path(technology), class: 'btn btn-primary btn-sm m-1' %>
+        <%= link_to 'Edit', edit_technology_path(technology), class: 'btn btn-primary btn-sm m-1' %>
+        <%= link_to 'Delete', technology_path(technology), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-sm m-1' %>
+      </div>
+    </div>
+  <% end %>
+
+</div>

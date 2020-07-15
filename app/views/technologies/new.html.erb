@@ -1,0 +1,48 @@
+<div class="container mt-5 mb-5">
+  <h1 class="mb-5">
+    New technology
+  </h1>
+
+  <div class="border rounded p-3">
+    <%= form_for :technology, url: technologies_path do |f| %>
+      <div class="border rounded p-5 text-muted mb-3">
+        <h6>
+          <%= f.label :title, class: 'form-group' %>
+        </h6>
+        <%= f.text_field :title, class: 'form-control', autofocus: true %>
+      </div>
+
+      <div class="border rounded p-5 text-muted mb-3">
+        <h6>
+          <%= f.label :purpose, class: 'form-group' %>
+        </h6>
+        <%= f.text_field :purpose, class: 'form-control' %>
+      </div>
+
+      <div class="border rounded p-5 text-muted mb-3">
+        <h6>
+          <%= f.label :description, class: 'form-group' %>
+        </h6>
+        <%= f.text_area :description, class: 'form-control', rows: '5' %>
+      </div>
+
+      <div class="border rounded p-5 text-muted mb-3">
+        <h6>
+          <%= f.label :doc, class: 'form-group' %>
+        </h6>
+        <%= f.text_field :doc, class: 'form-control' %>
+      </div>
+
+      <div class="border rounded p-5 text-muted mb-3">
+        <h6>
+          <%= f.label :rating, class: 'form-group' %>
+        </h6>
+        <%= f.text_field :rating, class: 'form-control' %>
+      </div>
+
+      <div>
+        <%= f.submit class: 'btn btn-primary btn-large' %>
+      </div>
+    <% end %>
+  </div>
+</div>

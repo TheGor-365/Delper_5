@@ -1,0 +1,43 @@
+<div class="container mt-5 mb-5">
+
+  <h1 class="mt-5 mb-3">
+    <%= @technology.title %>
+  </h1>
+
+  <small class="text-muted">
+    Lesson id: <%= @technology.id %>
+  </small>
+
+  <p>
+    Technology purpose: <%= @technology.purpose %>
+  </p>
+
+  <div class="border rounded p-3 text-muted col-md-8 mb-3">
+    <small class="text-muted">
+      Technology description: <%= @technology.description %>
+    </small>
+  </div>
+
+  <div class="border rounded p-3 text-muted col-md-8 mb-3">
+    <small>
+      Technology docs: <%= @technology.doc %>
+    </small>
+  </div>
+
+  <div class="border rounded p-3 col-md-3 mb-3">
+    <p>
+      Technology global rating:
+    </p>
+    <h3>
+      <%= @technology.rating %>
+    </h3>
+  </div>
+
+  <div>
+    <%= link_to 'back', technologies_path, class: 'btn btn-primary btn-sm mb-5' %>
+  </div>
+
+  <h3 class="mt-5 mb-5">
+    <%= @technology.title %> lessons
+  </h3>
+</div>
